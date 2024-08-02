@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidCalc</title>
+    <link rel="stylesheet" id="cssfile" href="assets/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <section class="header" >
+            <div class="login"><h1>Log in</h1></div>
+            <form id="login-form" >
+                <div class="name">
+                    <input type="text" id="name" required >
+                    <label for="name">Name</label>
+                </div>
+                <div class="age">
+                    <input type="number" max="100" min="3" id="age" required>
+                    <label for="age">Age</label>
+                </div>
+                <div class="theme">
+                    <label for="themes">Choose theme :-</label>
+            <select name="themes" id="themes">
+                <option value="default-theme">Default</option>
+                <option value="marvel-theme">Marvel</option>
+                <option value="dinosaur-theme">Dinosaur</option>
+                <option value="space-theme">Space</option>
+            </select>
+                </div>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        </section>
+        <section class="calculator">
+            <h2>Kid calc</h2>
+            <div class="kidcalc">
+                <input type="text" id="operation" readonly >
+                <input type="number" id="answer" placeholder="your answer">
+                <input type="text" id="result" readonly>
+                <div class="calc">
+                    <button onclick="addToOperation('7')">7</button>
+                    <button onclick="addToOperation('8')">8</button>
+                    <button onclick="addToOperation('9')">9</button>
+                    <button onclick="addToOperation('+')">+</button>
+                    <button onclick="addToOperation('4')">4</button>
+                    <button onclick="addToOperation('5')">5</button>
+                    <button onclick="addToOperation('6')">6</button>
+                    <button onclick="addToOperation('-')">-</button>
+                    <button onclick="addToOperation('1')">1</button>
+                    <button onclick="addToOperation('2')">2</button>
+                    <button onclick="addToOperation('3')">3</button>
+                    <button onclick="addToOperation('>')">></button>
+                    <button onclick="addToOperation('c')">C</button>
+                    <button onclick="addToOperation('0')">0</button>
+                    <button onclick="addToOperation('<')">&lt;</button>
+
+                    <button onclick="calculate()">=</button>
+                    <div class="about">
+                        <div id="informationBar"></div>
+                    <div class="score">
+                        Your score is <div id="score">0</div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
